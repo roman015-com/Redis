@@ -4,7 +4,7 @@ ARG REDIS_PASSWORD
 
 WORKDIR /
 COPY redis.conf /
-RUN sed -i 's/RedisPassword/$REDIS_PASSWORD/' redis.conf  
+RUN sed -i "s/RedisPassword/$REDIS_PASSWORD/" redis.conf  
 RUN cat redis.conf  
 
 COPY redis.conf /usr/local/etc/redis/redis.conf
