@@ -1,6 +1,6 @@
 # https://hub.docker.com/_/redis
-ARG REDIS_PASSWORD
 FROM redis:6.2.4
+ARG REDIS_PASSWORD
 WORKDIR /temp
 COPY redis.conf /temp/
 RUN echo 'testBEFORE'
