@@ -2,7 +2,7 @@
 FROM mcr.microsoft.com/powershell AS configGen
 WORKDIR /scripts
 COPY Generate-RedisConfig.ps1 /scripts/
-SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
+SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 RUN .\Generate-RedisConfig.ps1
 
 
